@@ -1,0 +1,323 @@
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styles.css ***!
+  \******************************************************************/
+body {
+  /* Mengatur font, margin, padding, warna latar belakang, dan warna teks */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1faee;
+  color: #1d3557;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  /* Mengatur gaya header */
+  background-color: #1d3557;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-container {
+  /* Mengatur gaya container pencarian */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  /* Mengatur gaya utama */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+footer {
+  /* Mengatur gaya footer */
+  background-color: #1d3557;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+#notes-container {
+  /* Mengatur gaya container catatan */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 1rem; /* Tambahkan jarak atas */
+}
+
+#notes-container h2 {
+  grid-column: 1 / -1; /* Membuat label menempati seluruh lebar container */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#archived-notes-container {
+  /* Mengatur gaya container catatan yang diarsipkan */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 1rem; /* Tambahkan jarak atas */
+}
+
+#archived-notes-container h2 {
+  grid-column: 1 / -1; /* Membuat label menempati seluruh lebar container */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1d3557;
+}
+
+.note {
+  /* Mengatur gaya catatan */
+  border: 1px solid #457b9d;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #a8dadc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* Set minimum height */
+}
+
+.note:hover {
+  /* Efek hover pada catatan */
+  transform: scale(1.05);
+}
+
+.note button {
+  /* Sembunyikan tombol secara default */
+  display: none;
+}
+
+.note:hover button {
+  /* Tampilkan tombol saat hover */
+  display: inline-block;
+}
+
+.note .options {
+  /* Sembunyikan opsi secara default */
+  display: none;
+}
+
+.note.show-options .options {
+  /* Tampilkan opsi saat kelas .show-options ditambahkan */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note .options button {
+  /* Mengatur gaya tombol opsi */
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.note .options #delete-button {
+  /* Warna merah untuk tombol hapus */
+  background-color: #e74c3c;
+  color: white;
+}
+
+.note .options #edit-button {
+  /* Warna kuning untuk tombol edit */
+  background-color: #f1c40f;
+  color: #2c3e50;
+}
+
+.note .options #archive-button {
+  background-color: #3498db; /* Blue color for archive button */
+  color: white;
+}
+
+.note .options #unarchive-button {
+  background-color: #2ecc71; /* Green color for unarchive button */
+  color: white;
+}
+
+.note .options #delete-button:hover {
+  /* Efek hover pada tombol hapus */
+  background-color: #c0392b;
+}
+
+.note .options #edit-button:hover {
+  /* Efek hover pada tombol edit */
+  background-color: #f39c12;
+}
+
+.note .options #archive-button:hover {
+  background-color: #2980b9;
+}
+
+.note .options #unarchive-button:hover {
+  background-color: #27ae60;
+}
+
+.note h2 {
+  /* Mengatur gaya judul catatan */
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  color: #1d3557;
+}
+
+.note p {
+  /* Mengatur gaya isi catatan */
+  color: #333;
+}
+
+form {
+  /* Mengatur gaya form */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #a8dadc;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem; /* Tambahkan jarak bawah */
+}
+
+input,
+textarea,
+button {
+  /* Mengatur gaya input, textarea, dan tombol */
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+textarea {
+  /* Mengatur tinggi textarea */
+  height: 200px;
+}
+
+button {
+  /* Mengatur gaya tombol */
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  /* Efek hover pada tombol */
+  background-color: #1d3557;
+}
+
+#error {
+  /* Mengatur gaya pesan error */
+  color: #e63946;
+  font-size: 0.875rem;
+}
+
+#search-input {
+  /* Mengatur gaya input pencarian */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+.edit-form {
+  /* Mengatur gaya form edit */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #a8dadc;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.edit-form input,
+.edit-form textarea,
+.edit-form button {
+  /* Mengatur gaya input, textarea, dan tombol pada form edit */
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: 1px solid #457b9d;
+  border-radius: 5px;
+}
+
+.edit-form textarea {
+  /* Mengatur tinggi textarea pada form edit */
+  height: 200px;
+}
+
+.edit-form button {
+  /* Mengatur gaya tombol pada form edit */
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-form button:hover {
+  /* Efek hover pada tombol pada form edit */
+  background-color: #1d3557;
+}
+
+#loading-indicator {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+@media (max-width: 600px) {
+  /* Mengatur gaya responsif untuk layar kecil */
+  main {
+    padding: 0.5rem;
+  }
+
+  form {
+    padding: 0.5rem;
+  }
+
+  .note {
+    padding: 0.5rem;
+  }
+}
